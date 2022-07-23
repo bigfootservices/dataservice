@@ -1,7 +1,7 @@
 <template>
     <nav class="flex items-center justify-between flex-wrap bg-black p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <img src="/images/logo.png" class="h-20 w-auto"/>
+            <img src="@/images/logo.png" class="h-20 w-auto"/>
             <span class="font-semibold text-xl tracking-tight">Bigfoot Data Project</span>
         </div>
         <div class="block lg:hidden">
