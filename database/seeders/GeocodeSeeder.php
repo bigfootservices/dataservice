@@ -28,7 +28,7 @@ class GeocodeSeeder extends Seeder
                 "temperature_mid" => $value->temperature_mid ?? null,
                 "temperature_low" => $value->temperature_low ?? null,
                 "dew_point" => $value->dew_point ?? null,
-                "humiity" => $value->humidity ?? null,
+                "humidity" => $value->humidity ?? null,
                 "cloud_cover" => $value->cloud_cover ?? null,
                 "moon_phase" => $value->moon_phase ?? null,
                 "precip_intensity" => $value->intensity ?? null,
