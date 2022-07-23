@@ -25,7 +25,7 @@ class GeocodeSeeder extends Seeder
                 "longitude" => $value->longitude ?? null,
                 "geohash" => $value->geohash ?? null,
                 "temperature_high" => $value->temperature_high ?? null,
-                "temperature_mid" => $value->temperature_mid ?? null,
+                "temperature_mid" => floatval($value->temperature_mid) ?? null,
                 "temperature_low" => $value->temperature_low ?? null,
                 "dew_point" => $value->dew_point ?? null,
                 "humidity" => $value->humidity ?? null,
