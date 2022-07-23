@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * @property int $id
@@ -30,4 +31,14 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+
+    public function location(): HasOne
+    {
+        return $this->hasOne(Location::class);
+    }
+
+    public function geocode(): HasOne
+    {
+        return $this->hasOne(Geocode::class);
+    }
 }
