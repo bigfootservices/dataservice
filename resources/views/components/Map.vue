@@ -9,6 +9,7 @@
             <InfoWindow :options="{ position: center }">
                 <div>Latitude: {{location.latitude}}</div>
                 <div>Longitude: {{location.longitude}}</div>
+                <div>ID: {{location.report_id}}</div>
                 <div v-if="location?.report?.observed">Observations: {{location.report.observed}}</div>
             </InfoWindow>
         </Marker>
