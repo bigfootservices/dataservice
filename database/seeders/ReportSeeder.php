@@ -20,6 +20,7 @@ class ReportSeeder extends Seeder
 
         foreach ($reports as $key => $value) {
             Report::create([
+                "report_id" => $value->report_id ?? null,
                 "year" => $value->year ?? null,
                 "season" => $value->season ?? null,
                 "month" => $value->month ?? null,
