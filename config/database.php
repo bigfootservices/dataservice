@@ -70,15 +70,30 @@ return [
             ]) : [],
         ],
 
+//        'pgsql' => [
+//            'driver'   => 'pgsql',
+//            'host'     => $host,
+//            'database' => $database,
+//            'username' => $username,
+//            'password' => $password,
+//            'charset'  => 'utf8',
+//            'collection' => 'utf8_general_ci',
+//            'prefix'   => '',
+//            'schema'   => 'public',
+//        ],
+
         'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => $host,
+            'driver' => 'pgsql',
+            'host' => $host,
             'database' => $database,
             'username' => $username,
             'password' => $password,
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            'schema'   => 'public',
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
         ],
 
         'sqlsrv' => [
