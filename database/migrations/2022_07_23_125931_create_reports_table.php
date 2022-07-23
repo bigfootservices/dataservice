@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
+            $table->integer('report_id')->nullable()->default(null);
             $table->string('year')->nullable()->default(null);
             $table->string('season')->nullable()->default(null);
             $table->string('month')->nullable()->default(null);
