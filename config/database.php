@@ -69,19 +69,6 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
-//        'pgsql' => [
-//            'driver'   => 'pgsql',
-//            'host'     => $host,
-//            'database' => $database,
-//            'username' => $username,
-//            'password' => $password,
-//            'charset'  => 'utf8',
-//            'collection' => 'utf8_general_ci',
-//            'prefix'   => '',
-//            'schema'   => 'public',
-//        ],
-
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => $host,

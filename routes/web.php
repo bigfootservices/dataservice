@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $locations = \App\Models\Location::with(['report' => ['geocode']])->get();
+    return inertia('welcome', ['locations' => $locations]);
 });

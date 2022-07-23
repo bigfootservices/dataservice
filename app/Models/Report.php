@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
  * @property int $id
+ * @property int $report_id
  * @property string $year
  * @property string $season
  * @property string $month
@@ -34,11 +35,11 @@ class Report extends Model
 
     public function location(): HasOne
     {
-        return $this->hasOne(Location::class);
+        return $this->hasOne(Location::class, 'id', 'report_id');
     }
 
     public function geocode(): HasOne
     {
-        return $this->hasOne(Geocode::class);
+        return $this->hasOne(Geocode::class, 'id', 'report_id');
     }
 }
