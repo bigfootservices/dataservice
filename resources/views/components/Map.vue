@@ -1,5 +1,4 @@
 <template>
-    {{$page.props.reports}}
     <GoogleMap api-key="AIzaSyCCm26MCZpqUFFY5-ubOrJj9-IeNDuhH4Q" style="width: 100%; height: 85vh" :center="center" :zoom="3">
         <Marker
             v-for="(location, i) in $page.props.locations"
@@ -7,6 +6,7 @@
             :key="i"
         >
             <InfoWindow :options="{ position: center }">
+                <div>Location Id: {{location.id}}</div>
                 <div>Latitude: {{location.latitude}}</div>
                 <div>Longitude: {{location.longitude}}</div>
                 <div>ID: {{location.report_id}}</div>
@@ -22,7 +22,7 @@ import { GoogleMap, Marker, InfoWindow } from "vue3-google-map";
 
 export default defineComponent({
     props: {
-        reports: Array,
+        locations: Array,
     },
     components: { GoogleMap, Marker, InfoWindow },
     setup() {

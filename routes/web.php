@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $locations = \App\Models\Location::with(['report' => ['geocode']])->get();
-    return inertia('welcome', ['locations' => $locations]);
+    $locations = \App\Models\Location::has('report')
+        ->with(['report' => ['geocode']])
+        ->whereNotNull(['locations.latitude', 'locations.longitude'])
+        ->get();
+
+    $notFound = \App\Models\Report::doesntHave('location')->get()->count();
+
+    return inertia('welcome', ['locations' => $locations, 'notFound' => $notFound]);
 });

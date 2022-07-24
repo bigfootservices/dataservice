@@ -35,11 +35,11 @@ class Report extends Model
 
     public function location(): HasOne
     {
-        return $this->hasOne(Location::class, 'id', 'report_id');
+        return $this->hasOne(Location::class, 'report_id', 'report_id');
     }
 
     public function geocode(): HasOne
     {
-        return $this->hasOne(Geocode::class, 'id', 'report_id');
+        return $this->hasOne(Geocode::class, 'report_id', 'report_id');
     }
 }
